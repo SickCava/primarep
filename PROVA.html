@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<h1>Prova Modal</h1>
+		<!--INCLUDE PER MODAL-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<!--
+		BOTTONE MODAL
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Modal</button>
+
+		MODAL
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    CONTENUTO MODAL
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      	BOTTONE CHISURA (X)
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Intestazione</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>Corpo del modal</p>
+		      </div>
+		      <div class="modal-footer">
+		      	BOTTONE CHISURA
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+-->
+
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Modal Inserimento</button>
+
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!--CONTENUTO MODAL-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      	<!--BOTTONE CHISURA (X)-->
+		        
+		        <h4 class="modal-title">Intestazione</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>Corpo del modal</p>
+		        <form action="inviomodal.php" method="post" name="form" >
+		        	<label>Inserisci Nome</label>
+		        	<input type="text" name="nome" id="nome"><br>
+		        	<label>Inserisci Cognome</label>
+		        	<input type="text" name="cognome" id="cognome"><br>
+		        	<label>Inserisci Messaggio</label>
+		        	<input type="text" name="mex" id="mex"><br>
+		        	<input type="submit" value="invia" onclick="return controllo()">
+		        </form>
+		        <script>
+		        	function controllo(){
+		        		var ok = true;
+		        		var nome = document.getElementById('nome').value;
+		        		var cognome = document.getElementById('cognome').value;
+		        		var mex = document.getElementById('mex').value;
+		        		if(nome == "" || cognome == "" || mex == ""){
+		        			alert("INSERISCI TUTTI I CAMPI");
+		        			ok = false;
+		        		}
+		        		return ok;
+		        	}
+		       	</script>
+		      </div>
+		      <div class="modal-footer">
+		      	<!--BOTTONE CHISURA-->
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	</body>
+	<script>
+
+	</script>
+</html>
